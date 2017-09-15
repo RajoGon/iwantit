@@ -994,9 +994,10 @@ var FilterPipe = (function () {
             // })
             for (var _i = 0, value_1 = value; _i < value_1.length; _i++) {
                 var x = value_1[_i];
-                if (x.title.indexOf(input) !== -1) {
-                    this.filtered.push(x);
-                }
+                console.log(x.title);
+                //     if(x.title.indexOf(input) !== -1){
+                // this.filtered.push(x);
+                //}
             }
             return this.filtered;
         }
