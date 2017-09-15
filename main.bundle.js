@@ -104,9 +104,9 @@ var AppModule = (function () {
 AppModule = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["M" /* NgModule */])({
         imports: [__WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__["a" /* BrowserModule */], __WEBPACK_IMPORTED_MODULE_4__angular_forms__["a" /* FormsModule */], __WEBPACK_IMPORTED_MODULE_2__angular_http__["c" /* HttpModule */], __WEBPACK_IMPORTED_MODULE_3__angular_router__["c" /* RouterModule */].forRoot([
-                { path: '/iwantit/', component: __WEBPACK_IMPORTED_MODULE_10__components_home_home_component__["a" /* HomeComponent */] },
-                { path: '/iwantit/myaccount', component: __WEBPACK_IMPORTED_MODULE_14__components_myaccount_myaccount_component__["a" /* MyAccountComponent */] },
-                { path: '/iwantit/productview', component: __WEBPACK_IMPORTED_MODULE_15__components_product_view_product_view_component__["a" /* ProductViewComponent */] }
+                { path: './iwantit/', component: __WEBPACK_IMPORTED_MODULE_10__components_home_home_component__["a" /* HomeComponent */] },
+                { path: './iwantit/myaccount', component: __WEBPACK_IMPORTED_MODULE_14__components_myaccount_myaccount_component__["a" /* MyAccountComponent */] },
+                { path: './iwantit/productview', component: __WEBPACK_IMPORTED_MODULE_15__components_product_view_product_view_component__["a" /* ProductViewComponent */] }
             ])
         ],
         declarations: [__WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* AppComponent */], __WEBPACK_IMPORTED_MODULE_6__components_navigation_component_navigation_component__["a" /* NavigationComponent */], __WEBPACK_IMPORTED_MODULE_7__components_navigation_component_login_component_login_component__["a" /* LoginComponent */],
