@@ -981,6 +981,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 var FilterPipe = (function () {
     function FilterPipe() {
+        this.filtered = [];
     }
     FilterPipe.prototype.transform = function (value, input) {
         if (!value)
@@ -991,9 +992,13 @@ var FilterPipe = (function () {
             // return value.title.filter(function (el: any) {
             //     return el.toLowerCase().indexOf(input) > -1;
             // })
-            if (value.title.indexOf(input) !== -1) {
-                return value;
+            for (var _i = 0, value_1 = value; _i < value_1.length; _i++) {
+                var x = value_1[_i];
+                if (x.title.indexOf(input) !== -1) {
+                    this.filtered.push(x);
+                }
             }
+            return this.filtered;
         }
         return value;
     };
