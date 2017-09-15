@@ -985,7 +985,7 @@ var FilterPipe = (function () {
     FilterPipe.prototype.transform = function (value, input) {
         if (input) {
             input = input.toLowerCase();
-            return value.filter(function (el) {
+            return value.title.filter(function (el) {
                 return el.toLowerCase().indexOf(input) > -1;
             });
         }
