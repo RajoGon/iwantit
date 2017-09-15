@@ -997,9 +997,10 @@ var FilterPipe = (function () {
                 var x = value_1[_i];
                 if (x.title.toLowerCase().indexOf(input) !== -1) {
                     this.filtered.push(x);
-                    console.log(x.title);
+                    console.log(x.title, "selected");
                 }
             }
+            console.log(this.filtered);
             return this.filtered;
         }
         return value;
