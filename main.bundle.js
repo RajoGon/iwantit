@@ -573,8 +573,10 @@ var MyAccountComponent = (function () {
     };
     MyAccountComponent.prototype.postAd = function (productTitle, productName, productDescription, productCategory) {
         var _this = this;
-        this.productService.postNewAd(this.loginToken, productTitle, productCategory, productDescription, productName).subscribe(function (response) { return _this.postSuccess = false; });
-        window.location.reload();
+        this.productService.postNewAd(this.loginToken, productTitle, productCategory, productDescription, productName).subscribe(function (response) {
+            _this.postSuccess = false;
+            _this.router.navigate(['/']);
+        });
     };
     //updatead
     MyAccountComponent.prototype.updateAd = function (id, title, category, description, name) {
@@ -607,16 +609,16 @@ var MyAccountComponent = (function () {
                 _this.updateSuccess = false;
                 _this.toPost = false;
                 _this.toUpdate = true;
+                _this.router.navigate(['/']);
             }, function (error) { return console.log('could not update'); });
-            window.location.reload();
         }
         else {
             this.productService.deleteAdOnServer(this.loginToken, this.productUpdate).subscribe(function (response) {
                 _this.updateSuccess = false;
                 _this.toPost = false;
                 _this.toUpdate = true;
+                _this.router.navigate(['/']);
             }, function (error) { return console.log('could not delete'); });
-            window.location.reload();
         }
     };
     return MyAccountComponent;
