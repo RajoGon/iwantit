@@ -989,7 +989,6 @@ var FilterPipe = (function () {
             return [];
         if (input) {
             input = input.toLowerCase();
-            console.log("input is", input, " and product title is", value);
             // return value.title.filter(function (el: any) {
             //     return el.toLowerCase().indexOf(input) > -1;
             // })
