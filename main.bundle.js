@@ -985,9 +985,13 @@ var FilterPipe = (function () {
     FilterPipe.prototype.transform = function (value, input) {
         if (input) {
             input = input.toLowerCase();
-            return value.title.filter(function (el) {
-                return el.toLowerCase().indexOf(input) > -1;
-            });
+            console.log("input is", input, " and product title is", value.title);
+            // return value.title.filter(function (el: any) {
+            //     return el.toLowerCase().indexOf(input) > -1;
+            // })
+            if (value.title.indexOf(input) !== -1) {
+                return value;
+            }
         }
         return value;
     };
