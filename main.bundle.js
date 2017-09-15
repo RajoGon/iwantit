@@ -984,6 +984,7 @@ var FilterPipe = (function () {
         this.filtered = [];
     }
     FilterPipe.prototype.transform = function (value, input) {
+        this.filtered = [];
         if (!value)
             return [];
         if (input) {
@@ -994,10 +995,10 @@ var FilterPipe = (function () {
             // })
             for (var _i = 0, value_1 = value; _i < value_1.length; _i++) {
                 var x = value_1[_i];
-                console.log(x.title);
-                //     if(x.title.indexOf(input) !== -1){
-                // this.filtered.push(x);
-                //}
+                if (x.title.toLowerCase().indexOf(input) !== -1) {
+                    this.filtered.push(x);
+                    console.log(x.title);
+                }
             }
             return this.filtered;
         }
